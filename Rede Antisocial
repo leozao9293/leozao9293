@@ -1,0 +1,58 @@
+import tkinter as tk
+import emoji
+
+def verificar_resposta():
+    texto = entrada.get()
+    if texto == 'Eu sou social':
+        resposta_label.config(text='' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404')
+    elif texto == 'eu sou social':
+        resposta_label.config(text='' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404')
+    elif texto == 'Eu Sou Social':
+        resposta_label.config(text='' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404')
+    elif texto == 'EU SOU SOCIAL':
+        resposta_label.config(text='' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404 ' \
+        'ERROR 404')
+    else:
+        resposta_label.config(text='👍')
+
+janela = tk.Tk()
+janela.title('Rede Anti-social')
+janela.geometry('1920x1080')
+
+label = tk.Label(
+    janela,
+    text='Rede Anti-social',
+    font=('formula1 display regular', 45)
+)
+label.pack()
+
+entrada = tk.Entry(janela, font=('formula1 display regular', 45))
+entrada.pack()
+
+botao = tk.Button(
+    janela,
+    text='Enviar',
+    font=('formula1 display regular', 45),
+    command=verificar_resposta
+)
+botao.pack()
+
+resposta_label = tk.Label(janela, text='', font=('formula1 display regular', 40), fg='red')
+resposta_label.pack()
+
+janela.mainloop()
